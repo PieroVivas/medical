@@ -1,0 +1,279 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.5
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1:3307
+-- Tiempo de generación: 26-09-2020 a las 19:59:17
+-- Versión del servidor: 10.3.14-MariaDB
+-- Versión de PHP: 5.6.40
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Base de datos: `medical`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `categorias`
+--
+
+DROP TABLE IF EXISTS `categorias`;
+CREATE TABLE IF NOT EXISTS `categorias` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `categoria` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `marcas`
+--
+
+DROP TABLE IF EXISTS `marcas`;
+CREATE TABLE IF NOT EXISTS `marcas` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `marca` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `medidas`
+--
+
+DROP TABLE IF EXISTS `medidas`;
+CREATE TABLE IF NOT EXISTS `medidas` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `medida` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `migrations`
+--
+
+DROP TABLE IF EXISTS `migrations`;
+CREATE TABLE IF NOT EXISTS `migrations` (
+  `migration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `migrations`
+--
+
+INSERT INTO `migrations` (`migration`, `batch`) VALUES
+('2014_10_12_000000_create_users_table', 1),
+('2014_10_12_100000_create_password_resets_table', 1),
+('2019_11_11_231311_create_roles_table', 1),
+('2019_11_11_231450_create_role_user_table', 1),
+('2019_11_11_235510_create_trabajadores_table', 2),
+('2020_09_02_120727_create_grupos_table', 3),
+('2020_09_02_131642_create_materiales_table', 4),
+('2020_09_02_133423_create_iconos_table', 5),
+('2020_09_02_140002_create_categorias_table', 6),
+('2020_09_02_154437_create_sub_categorias_table', 7),
+('2020_09_02_165156_create_tallas_table', 8),
+('2020_09_02_183323_create_colores_table', 9),
+('2020_09_03_122235_create_productos_table', 10),
+('2020_09_03_141247_create_imagenes_table', 11),
+('2020_09_03_173312_create_inventarios_table', 12),
+('2020_09_04_115721_create_tipos_table', 13),
+('2020_09_04_124304_create_proveedores_table', 14),
+('2020_09_04_161044_create_banners_table', 15),
+('2020_09_07_112634_create_ingresos_table', 16),
+('2020_09_07_131907_create_detalle_ingresos_table', 17),
+('2020_09_07_163036_create_salidas_table', 18),
+('2020_09_07_163432_create_motivos_table', 19),
+('2020_09_07_171038_create_detalle_salidas_table', 20),
+('2020_09_24_163902_create_categorias_table', 21),
+('2020_09_24_165411_create_marcas_table', 22),
+('2020_09_24_170930_create_tipos_table', 23),
+('2020_09_24_175157_create_medidas_table', 24),
+('2020_09_24_182120_create_proveedores_table', 25),
+('2020_09_24_182803_create_productos_table', 26);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `password_resets`
+--
+
+DROP TABLE IF EXISTS `password_resets`;
+CREATE TABLE IF NOT EXISTS `password_resets` (
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  KEY `password_resets_email_index` (`email`),
+  KEY `password_resets_token_index` (`token`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `productos`
+--
+
+DROP TABLE IF EXISTS `productos`;
+CREATE TABLE IF NOT EXISTS `productos` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `detalle` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `fkcategoria` int(11) NOT NULL,
+  `fkmarca` int(11) NOT NULL,
+  `fkmedida` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `proveedores`
+--
+
+DROP TABLE IF EXISTS `proveedores`;
+CREATE TABLE IF NOT EXISTS `proveedores` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `ruc` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `razon` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `direccion` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `telefono1` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `telefono2` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `contacto` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `fktipo` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `roles`
+--
+
+DROP TABLE IF EXISTS `roles`;
+CREATE TABLE IF NOT EXISTS `roles` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `roles`
+--
+
+INSERT INTO `roles` (`id`, `name`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'administrador', 'ADMINISTRADOR', '2020-03-15 18:33:00', '2020-03-15 18:33:00');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `role_user`
+--
+
+DROP TABLE IF EXISTS `role_user`;
+CREATE TABLE IF NOT EXISTS `role_user` (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `role_id` int(10) UNSIGNED NOT NULL,
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `role_user`
+--
+
+INSERT INTO `role_user` (`id`, `role_id`, `user_id`, `created_at`, `updated_at`) VALUES
+(6, 1, 1, '2020-09-25 00:22:10', '2020-09-25 00:22:10');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tipos`
+--
+
+DROP TABLE IF EXISTS `tipos`;
+CREATE TABLE IF NOT EXISTS `tipos` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `tipo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `trabajadores`
+--
+
+DROP TABLE IF EXISTS `trabajadores`;
+CREATE TABLE IF NOT EXISTS `trabajadores` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nombres` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `dni` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `direccion` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `celular` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `fkusuario` int(11) NOT NULL,
+  `clave` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `trabajadores`
+--
+
+INSERT INTO `trabajadores` (`id`, `nombres`, `dni`, `direccion`, `celular`, `fkusuario`, `clave`, `created_at`, `updated_at`) VALUES
+(1, 'Medical', '4534535', 'PETUNIA', '95987655', 1, 'admin123', NULL, '2020-09-25 00:22:10');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `users_email_unique` (`email`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'medical', 'medical@gmail.com', '$2y$10$bgob9SLJ9qeq4bV9rD5.GevZdUZGfYGoC357D/1edvwg.WT.XQqo6', 'gaQRNMDczvU9GJ9u2RcsHzcGdXhSXoYho5NoOaN5M26pQVbF2OflFlr2PoMT', '2020-03-15 18:33:40', '2020-09-25 00:51:53');
+COMMIT;

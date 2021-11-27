@@ -1,0 +1,31 @@
+[26-Nov-2020 22:17:28 UTC] PHP Warning:  require_once(Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 2
+[26-Nov-2020 22:17:28 UTC] PHP Fatal error:  require_once(): Failed opening required 'Classes/PHPExcel.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 2
+[26-Nov-2020 22:33:03 UTC] PHP Warning:  require_once(Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 2
+[26-Nov-2020 22:33:03 UTC] PHP Fatal error:  require_once(): Failed opening required 'Classes/PHPExcel.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 2
+[26-Nov-2020 22:33:07 UTC] PHP Warning:  require_once(Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 2
+[26-Nov-2020 22:33:07 UTC] PHP Fatal error:  require_once(): Failed opening required 'Classes/PHPExcel.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 2
+[26-Nov-2020 22:33:08 UTC] PHP Warning:  require_once(Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 2
+[26-Nov-2020 22:33:08 UTC] PHP Fatal error:  require_once(): Failed opening required 'Classes/PHPExcel.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 2
+[26-Nov-2020 22:33:13 UTC] PHP Warning:  require_once(Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 2
+[26-Nov-2020 22:33:13 UTC] PHP Fatal error:  require_once(): Failed opening required 'Classes/PHPExcel.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 2
+[26-Nov-2020 22:33:15 UTC] PHP Warning:  require_once(Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 2
+[26-Nov-2020 22:33:15 UTC] PHP Fatal error:  require_once(): Failed opening required 'Classes/PHPExcel.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 2
+[26-Nov-2020 22:42:32 UTC] PHP Warning:  require_once(Classes/PHPExcel.php): failed to open stream: No such file or directory in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 2
+[26-Nov-2020 22:42:32 UTC] PHP Fatal error:  require_once(): Failed opening required 'Classes/PHPExcel.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 2
+[26-Nov-2020 22:50:30 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/csjiga8ngoyi/public_html/medical/Classes/PHPExcel/Writer/Excel2007.php on line 225
+[26-Nov-2020 22:50:31 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/csjiga8ngoyi/public_html/medical/Classes/PHPExcel/Writer/Excel2007.php on line 225
+[26-Nov-2020 22:50:36 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/csjiga8ngoyi/public_html/medical/Classes/PHPExcel/Writer/Excel2007.php on line 225
+[26-Nov-2020 22:50:37 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/csjiga8ngoyi/public_html/medical/Classes/PHPExcel/Writer/Excel2007.php on line 225
+[26-Nov-2020 22:50:44 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/csjiga8ngoyi/public_html/medical/Classes/PHPExcel/Writer/Excel2007.php on line 225
+[26-Nov-2020 22:50:46 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/csjiga8ngoyi/public_html/medical/Classes/PHPExcel/Writer/Excel2007.php on line 225
+[26-Nov-2020 22:51:13 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/csjiga8ngoyi/public_html/medical/Classes/PHPExcel/Writer/Excel2007.php on line 225
+[26-Nov-2020 22:51:14 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/csjiga8ngoyi/public_html/medical/Classes/PHPExcel/Writer/Excel2007.php on line 225
+[26-Nov-2020 22:54:15 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/csjiga8ngoyi/public_html/medical/Classes/PHPExcel/Writer/Excel2007.php on line 225
+[26-Nov-2020 22:54:21 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/csjiga8ngoyi/public_html/medical/Classes/PHPExcel/Writer/Excel2007.php on line 225
+[26-Nov-2020 22:54:23 UTC] PHP Fatal error:  Class 'ZipArchive' not found in /home/csjiga8ngoyi/public_html/medical/Classes/PHPExcel/Writer/Excel2007.php on line 225
+[01-Dec-2020 03:44:18 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 24
+[01-Dec-2020 03:44:23 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 24
+[01-Dec-2020 03:44:24 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 24
+[01-Dec-2020 03:44:26 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 24
+[01-Dec-2020 03:45:50 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 24
+[01-Dec-2020 03:45:56 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/csjiga8ngoyi/public_html/medical/exportar_inventario.php on line 24

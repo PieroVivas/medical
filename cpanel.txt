@@ -1,0 +1,3 @@
+bd: finaesta_medical
+user: finaesta_medical_usuario
+pass: vJzF7+M3V*Fo
