@@ -268,7 +268,7 @@ class SalidaController extends Controller
 
     public function indicador_cumplimiento($fecha_inicial,$fecha_final)
     {
-
+        //ORM
         $salidas = \DB::table('salidas')
                 ->join('estados', 'salidas.fkestado', '=', 'estados.id')
                 ->select('salidas.id as id','fecha','fkestado','estado')
@@ -288,6 +288,53 @@ class SalidaController extends Controller
         return view('salidas.cumplimiento',compact('salidas','salidas_generales','fecha_inicial','fecha_final'));
     }
 
+    public function indicador_ganancia($fecha_inicial,$fecha_final)
+    {
+        //ORM
+        // $salidas = \DB::table('salidas')
+        //         ->join('estados', 'salidas.fkestado', '=', 'estados.id')
+        //         ->select('salidas.id as id','fecha','fkestado','estado')
+        //         ->whereBetween('fecha', [$fecha_inicial, $fecha_final])
+        //         ->groupby('fecha')
+        //         ->get();
+
+        // $salidas_generales = \DB::table('salidas')
+        //         ->join('estados', 'salidas.fkestado', '=', 'estados.id')
+        //         ->select('salidas.id as id','fecha','fkestado','estado')
+        //         ->whereBetween('fecha', [$fecha_inicial, $fecha_final])
+        //         ->get();
+        $results = \DB::select(\DB::raw("call obtenerGananciaPorProducto('$fecha_inicial','$fecha_final')"));
+
+        $fecha_inicial=$fecha_inicial;
+        $fecha_final=$fecha_final;
+
+
+        return view('salidas.reporte_ganancia',compact('results','fecha_inicial','fecha_final'));
+    }
+
+    public function indicador_ganancia_consolidado($fecha_inicial,$fecha_final)
+    {
+        //ORM
+        // $salidas = \DB::table('salidas')
+        //         ->join('estados', 'salidas.fkestado', '=', 'estados.id')
+        //         ->select('salidas.id as id','fecha','fkestado','estado')
+        //         ->whereBetween('fecha', [$fecha_inicial, $fecha_final])
+        //         ->groupby('fecha')
+        //         ->get();
+
+        // $salidas_generales = \DB::table('salidas')
+        //         ->join('estados', 'salidas.fkestado', '=', 'estados.id')
+        //         ->select('salidas.id as id','fecha','fkestado','estado')
+        //         ->whereBetween('fecha', [$fecha_inicial, $fecha_final])
+        //         ->get();
+        $results = \DB::select(\DB::raw("call obtenerGananciaPorProductoConsolidado('$fecha_inicial','$fecha_final')"));
+
+        $fecha_inicial=$fecha_inicial;
+        $fecha_final=$fecha_final;
+
+
+        return view('salidas.reporte_ganancia_consolidado',compact('results','fecha_inicial','fecha_final'));
+    }
 
 
     public function indicador_empleado($fecha_inicial,$fecha_final)

@@ -1002,6 +1002,56 @@ return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.p
          
          });
 
+         $(".reporte_ganancia").click(function (e) {
+                e.preventDefault();
+
+             var fecha_inicial = document.reporte_ganancia.elements['fecha_inicial'];
+             var fecha_final = document.reporte_ganancia.elements['fecha_final'];
+     
+              if(fecha_inicial.value == "")
+              {
+                    alert("Ingrese Fecha Inicial");
+                    fecha_inicial.focus();
+                    return false;
+              }
+
+              if(fecha_final.value == "")
+              {
+                     alert("Ingrese Fecha Final");
+                    fecha_final.focus();
+                    return false;
+              }
+
+              window.location.assign("{{ url('indicador_ganancia') }}/"+fecha_inicial.value+"/"+fecha_final.value);
+                   
+         
+         });
+
+         $("#reporte_ganancia_consolidado").click(function (e) {
+             e.preventDefault();
+             //console.log("Entro a boton");
+             var fecha_inicial = document.reporte_ganancia_consolidado.elements['fecha_inicial'];
+             var fecha_final = document.reporte_ganancia_consolidado.elements['fecha_final'];
+     
+              if(fecha_inicial.value == "")
+              {
+                    alert("Ingrese Fecha Inicial");
+                    fecha_inicial.focus();
+                    return false;
+              }
+
+              if(fecha_final.value == "")
+              {
+                     alert("Ingrese Fecha Final");
+                    fecha_final.focus();
+                    return false;
+              }
+
+              window.location.assign("{{ url('indicador_ganancia_consolidado') }}/"+fecha_inicial.value+"/"+fecha_final.value);
+                   
+         
+         });
+
 
           $(".anio_consultar").click(function (e) {
                 e.preventDefault();

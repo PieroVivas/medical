@@ -105,6 +105,9 @@ Route::get('/indicador2', 'SalidaController@indicador2');
 
 
 Route::get('/indicador_cumplimiento/{fecha_inicial}/{fecha_final}', 'SalidaController@indicador_cumplimiento');
+Route::get('/indicador_ganancia/{fecha_inicial}/{fecha_final}', 'SalidaController@indicador_ganancia');
+Route::get('/indicador_ganancia_consolidado/{fecha_inicial}/{fecha_final}', 'SalidaController@indicador_ganancia_consolidado');
+
 Route::get('/indicador_empleado/{fecha_inicial}/{fecha_final}', 'SalidaController@indicador_empleado');
 Route::get('/indicador_calidad/{fecha_inicial}/{fecha_final}', 'SalidaController@indicador_calidad');
 Route::get('/indicador_ingreso/{fecha_inicial}/{fecha_final}', 'SalidaController@indicador_ingreso');

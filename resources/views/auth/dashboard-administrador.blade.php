@@ -79,10 +79,10 @@
 
                                                                     <h5 class="user-name" style="color:black !important;font-size:20px">
                                                                         <i class="feather feather-grid"></i>
-                                                                       Ganancia de Inventario por Mes
+                                                                       Ganancia de Inventario por Mes y/o Año
                                                                     </h5>
 
-                                                                    <a href="{{ url('indicador_empleado/2020-01-01/2020-12-30') }}" class="btn btn-white mb-xl-0" id="skip" style="background-color:#6b717e;border:solid 0px;width:100%;text-align:center;display:block">Ver Indicador</b></a>
+                                                                    <a href="{{ url('indicador_ganancia/2020-01-01/2020-12-30') }}" class="btn btn-white mb-xl-0" id="skip" style="background-color:#6b717e;border:solid 0px;width:100%;text-align:center;display:block">Ver Indicador</b></a>
                                                                   </div>
 
                                                             </div>
